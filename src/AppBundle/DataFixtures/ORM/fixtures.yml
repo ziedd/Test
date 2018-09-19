@@ -1,0 +1,39 @@
+AppBundle\Entity\User:
+    user1:
+        username: 'zied'
+        email: 'ziedchallouf153@gmail.com'
+        # le mot de passe  "foo"
+        password: '$2a$08$Y1J2TZ6KMp7pA4MYmq4oW.S.RN8E9dXqFTUHVQtCWyTTnU37akcrW'
+
+    users{2..20}:
+        username : '<firstname()>'
+        email : '<email()>'
+        password: '<password()>'
+
+AppBundle\Entity\Contact:
+    contact_nicola:
+        username: 'Nicola'
+        email: 'nicola125@gmail.com'
+        users: "@user1"
+        adresses : ["@Adresse_nicola"]
+
+    contacts{1..25}:
+        username : '<firstname()>'
+        email :  '<email()>'
+        adresses : ["@Adresse_nicola"]
+AppBundle\Entity\Adresse:
+    Adresse_nicola:
+        contacts: '@contact_nicola'
+        ville: 'Noisy le garnd'
+        codePostal: 93160
+        rue : 'Mont dest'
+    Adresse_adrian:
+        contacts: '@contact_nicola'
+        ville: 'Bry sur Marne'
+        codePostal: 92160
+        rue : 'Mary teck'
+    Adresse_Sebastian:
+        contacts: '@contact_nicola'
+        ville: ''
+        codePostal: 91160
+        rue : 'Armory de bool'

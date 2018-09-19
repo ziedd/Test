@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap">
+
+{% endblock %}
+{% block body %}
+
+    {% block javascripts %}
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.m">
+    </script>
+
+        <script>
+
+            jQuery(document).ready(function() {
+                $('.js-datepicker').datepicker();
+                format: 'yyyy-mm-dd'
+            })
+
+        </script>
+
+    {% endblock %}
+
+     <div class="container">
+     <div class="row">
+        <div class="col-xs-12">
+
+            <h1>Nouveau Contact</h1>
+            {{ form_start(contactForm) }}
+
+            {# {{ form_row(contactForm.name) }}
+             {{ form_row(contactForm.subFamily) }}
+             {{ form_row(contactForm.speciesCount) }}
+             {{ form_row(contactForm.funFact) }}
+             {{ form_row(contactForm.isPublished) }}
+             {{ form_row(contactForm.updatedAt) }}#}
+
+            <button type="submit" class="btn btn-primary" formnovalidate >Enregister</button>
+            {{ form_end(contactForm) }}
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

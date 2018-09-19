@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact {{ contactName }}{% endblock %}
+
+{% block body %}
+    <h2 class="contact-name">{{ contactName }}</h2>
+    <div class="sea-creature-container">
+        <div class="contact-detailess">
+            <dl class="contact-details-list">
+                <dt>Nom de Famille:</dt>
+                <dd>{{  contact.lastName }}</dd>
+                <dt>Known Species:</dt>
+                <dd>{{  contact.email }}</dd>
+                <dt>Adresse:</dt>
+                <dd>{{ contact.adresse }}</dd>
+            </dl>
+        </div>
+    </div>
+    <div id="js-notes-wrapper"></div>
+
+{% endblock %}
