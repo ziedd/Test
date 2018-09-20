@@ -143,17 +143,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="16" column="7" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="70" />
+            <state relative-caret-position="486">
+              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmailContactTest.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EmailContactTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Tests/Controller/EmailContactTest.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
@@ -244,7 +244,6 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/BaseController.php" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/admin/edit_contact.html.twig" />
@@ -261,6 +260,7 @@
         <option value="$PROJECT_DIR$/app/Resources/views/contactes/list.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Tests/Controller/EmailContacteTest.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Tests/Controller/EmailContactTest.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -864,12 +864,12 @@
       <workItem from="1537271194683" duration="6000" />
       <workItem from="1537291513923" duration="15149000" />
       <workItem from="1537347385116" duration="2238000" />
-      <workItem from="1537350916963" duration="59887000" />
+      <workItem from="1537350916963" duration="60842000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90076000" />
+    <option name="totallyTimeSpent" value="91031000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1431" y="-4" width="1375" height="904" extended-state="6" />
@@ -1327,18 +1327,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Tests/Controller/EmailContactTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="43" column="56" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
           <folding />
         </state>
       </provider>
