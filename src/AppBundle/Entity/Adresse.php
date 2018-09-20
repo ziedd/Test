@@ -2,6 +2,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Table(name="adresse")
@@ -19,12 +20,28 @@ class Adresse
     /**
      * @ORM\ManyToOne(targetEntity="Contact",inversedBy="adresses")
      */
-    private $contacts;
+    private $contact;
 
     /**
+     * @Assert\NotBlank()
+     *
      * @ORM\Column(type="string", unique=true)
      */
     public $ville;
+
+    /**
+     * @Assert\NotBlank()
+     *
+     * @ORM\Column(type="string", unique=true)
+     */
+    public $rue;
+
+    /**
+     * @Assert\NotBlank()
+     *
+     * @ORM\Column(type="string", unique=true)
+     */
+    public $codePostal;
 
     /**
      * @return mixed
@@ -75,29 +92,19 @@ class Adresse
     }
 
     /**
-     * @ORM\Column(type="string", unique=true)
-     */
-    public $codePostal;
-
-    /**
-     * @ORM\Column(type="string", unique=true)
-     */
-    public $rue;
-
-    /**
      * @return mixed
      */
-    public function getContacts()
+    public function getContact()
     {
         return $this->contacts;
     }
 
     /**
-     * @param mixed $contacts
+     * @param mixed $contact
      */
-    public function setContacts($contacts)
+    public function setContacts($contact)
     {
-        $this->contacts = $contacts;
+        $this->contacts = $contact;
     }
 
     /**

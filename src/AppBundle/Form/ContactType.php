@@ -15,8 +15,11 @@ class ContactType extends AbstractType
         $builder->add('username', 'text',[
             'required' => true
         ])
+            ->add('lastname', 'text',[
+            'required' => true
+        ])
             ->add("email", 'email',[
-                'required' => true
+                'required' => true,
             ]);
     }
 

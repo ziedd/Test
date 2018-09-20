@@ -33,21 +33,17 @@ class UserController extends BaseController
      */
     public function registerHandleAction(Request $request)
     {
-        $errors = array();
+        $errors = [];
+         $email = $request->request->get('email');
+         $username = $request->request->get('username');
 
-        if (!$email = $request->request->get('email')) {
-            $errors[] = '"email" is required';
-        }
         if (!$plainPassword = $request->request->get('plainPassword')) {
             $errors[] = '"password" is required';
-        }
-        if (!$username = $request->request->get('username')) {
-            $errors[] = '"username" is required';
         }
 
         $userRepository = $this->getUserRepository();
 
-        // verifier l'existance d'utilisateur 
+        // verifier l'existance d'user 
         if ($existingUser = $userRepository->findUserByEmail($email)) {
             $errors[] = ErreurMsg::EMAIL_INVALID;
         }

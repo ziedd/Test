@@ -5,20 +5,22 @@
 
 {% endblock %}
 {% block body %}
+
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1>Editer  Contacte</h1>
 
-                {{ form_start(contactForm) }}
-                {{ form_row(contactForm.username) }}
-                {{ form_row(contactForm.lastname) }}
-                {{ form_row(contactForm.email) }}
+                <h1>Creer  Adresse</h1>
+
+                {{ form_start(adresseForm) }}
+                {{ form_row(adresseForm.ville) }}
+                {{ form_row(adresseForm.rue) }}
+                {{ form_row(adresseForm.codePostal) }}
+
                 <button type="submit" class="btn btn-primary" formnovalidate>Enregistrer</button>
-                    <a href= "{{ path('liste_adresse') }}" class="btn btn-xs bt"> editer ton Adresse</a>
-                {{ form_end(contactForm) }}
+                {{ form_end(adresseForm) }}
             </div>
-        </div>
 
+        </div>
     </div>
 {% endblock %}

@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- * Class EmailContactTest
+ * Class EmailContacteTest
  * @package AppBundle\Tests\Controller
  */
 class EmailContactTest extends WebTestCase

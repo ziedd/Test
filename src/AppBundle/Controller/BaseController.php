@@ -7,10 +7,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 use UserRepository;
 
+/**
+ * Class BaseController
+ * @package AppBundle\Controller
+ */
 class BaseController extends Controller
 {
     /**
-     * verifier si l'utilisateur est connecté ?
+     * verifier si l'user est connecté ?
      *
      * @return boolean
      */
@@ -23,7 +27,7 @@ class BaseController extends Controller
     /**
      * Lancer la connection
      *
-     * @param User $user
+     * @param Utilisateur $utilisateur
      */
     public function loginUser(User $user)
     {

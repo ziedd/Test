@@ -2,6 +2,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Table(name="contact")
@@ -17,20 +18,47 @@ class Contact
     private $id;
 
     /**
+     * @Assert\NotBlank()
+     * 
      * @ORM\Column(type="string", unique=true)
      */
     private $username;
-
+    
     /**
+     * @Assert\NotBlank()
+     * 
      * @ORM\Column(type="string", unique=true)
      */
     private $email;
 
     /**
-     * @ORM\OneToMany(targetEntity="Adresse",mappedBy="contacts")
+     * @ORM\OneToMany(targetEntity="Adresse",mappedBy="contact")
      */
     private $adresses;
 
+    /**
+     * @return mixed
+     */
+    public function getLastname()
+    {
+        return $this->lastname;
+    }
+
+    /**
+     * @param mixed $lastname
+     */
+    public function setLastname($lastname)
+    {
+        $this->lastname = $lastname;
+    }
+    
+    /**
+     * @Assert\NotBlank()
+     *
+     * @ORM\Column(type="string", unique=true)
+     */
+    private $lastname;
+    
     /**
      * @return mixed
      */

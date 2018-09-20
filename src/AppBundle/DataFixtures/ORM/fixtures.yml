@@ -13,27 +13,41 @@ AppBundle\Entity\User:
 AppBundle\Entity\Contact:
     contact_nicola:
         username: 'Nicola'
+        lastname : 'alim'
         email: 'nicola125@gmail.com'
+        users: "@user1"
+        adresses : ["@Adresse_nicola"]
+    contact_nilo:
+        username: 'Nilo'
+        lastname : 'alice'
+        email: 'niclo135@gmail.com'
+        users: "@user1"
+        adresses : ["@Adresse_nicola"]
+    contact_marine:
+        username: 'Marine'
+        lastname : 'Hene'
+        email: 'marine135@gmail.com'
         users: "@user1"
         adresses : ["@Adresse_nicola"]
 
     contacts{1..25}:
         username : '<firstname()>'
+        lastname : '<lastname()>'
         email :  '<email()>'
         adresses : ["@Adresse_nicola"]
 AppBundle\Entity\Adresse:
     Adresse_nicola:
-        contacts: '@contact_nicola'
+        contact: '@contact_nicola'
         ville: 'Noisy le garnd'
         codePostal: 93160
         rue : 'Mont dest'
     Adresse_adrian:
-        contacts: '@contact_nicola'
+        contact: '@contact_nicola'
         ville: 'Bry sur Marne'
         codePostal: 92160
         rue : 'Mary teck'
     Adresse_Sebastian:
-        contacts: '@contact_nicola'
-        ville: ''
+        contact: '@contact_nicola'
+        ville: 'Clichy'
         codePostal: 91160
         rue : 'Armory de bool'

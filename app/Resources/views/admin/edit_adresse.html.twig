@@ -11,21 +11,16 @@
             <div class="col-xs-12">
 
                 <h1>Editer ton Adresse</h1>
+
                 {{ form_start(adresseForm) }}
+                {{ form_row(adresseForm.ville) }}
+                {{ form_row(adresseForm.rue) }}
+                {{ form_row(adresseForm.codePostal) }}
 
-              {#  {{ form_row(contactForm.name) }}
-                {{ form_row(contactForm.subFamily) }}
-                {{ form_row(contactForm.speciesCount) }}
-                {{ form_row(contactForm.funFact) }}
-                {{ form_row(contactForm.isPublished) }}
-                {{ form_row(contactForm.updatedAt) }}#}
-
-                <button type="submit" class="btn btn-primary" formnovalidate >Enregistrer</button>
+                <button type="submit" class="btn btn-primary" formnovalidate>Enregistrer</button>
                 {{ form_end(adresseForm) }}
             </div>
-            <a href="{{ path('admin_adresse_edit', {'id': adresse.id}) }}" class="btn btn-xs bt">editer Adresse</a>
 
         </div>
-
     </div>
 {% endblock %}

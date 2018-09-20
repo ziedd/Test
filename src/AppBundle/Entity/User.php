@@ -2,6 +2,7 @@
 namespace AppBundle\Entity;
 
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -18,16 +19,22 @@ class User implements UserInterface
     private $id;
 
     /**
+     * @Assert\NotBlank()
+     * 
      * @ORM\Column(type="string", unique=true)
      */
     private $username;
-
+    
     /**
+     * @Assert\NotBlank()
+     * 
      * @ORM\Column(type="string", unique=true)
      */
     private $email;
 
     /**
+     * @Assert\NotBlank()
+     * 
      * @ORM\Column(type="string", length=64)
      */
     private $password;

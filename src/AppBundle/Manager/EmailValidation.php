@@ -18,8 +18,11 @@ class EmailValidation
      */
     public function getEmailValidation($email)
     {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            throw new \InvalidArgumentException("Invalid email format");
+        }
         $expected = strstr($email, '@');
-        // on accepte que l'extension gmail.com 
+        // par exemple on accepte que l'extension gmail.com
         if ($expected != '@gmail.com') {
             throw new \InvalidArgumentException('Email n\'est pas  sous  la forme @gmail.com');
         }
