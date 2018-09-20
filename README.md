@@ -20,7 +20,7 @@ Merci de tapper les commandes ci-dessous:
 =========================
 Pour le test fonctionnelle  merci de tapper:
 ---------------------------------------
--bin/phpunit -c app/  src/AppBundle/Tests/Controller/EmailContacteTest
+-bin/phpunit -c app/  src/AppBundle/Tests/Controller/EmailContactTest
 ---------------------------------------
 ZIED CHALLOUF@2018
 

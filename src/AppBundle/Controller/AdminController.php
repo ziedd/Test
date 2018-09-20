@@ -21,7 +21,7 @@ class AdminController extends BaseController
      * @return Response
      * @Route("/contact ",name="admin_contact_create")
      */
-    public function nouveauContactAction(Request $request)
+    public function newContactAction(Request $request)
     {
 
         $form = $this->createForm(ContactType::class);
@@ -45,9 +45,9 @@ class AdminController extends BaseController
     /**
      * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/contact/{id}/edit",name="admin_contact_edit")
-     *     
+     *
      */
-    public function EditContactAction(Request $request, Contact $contact)
+    public function editContactAction(Request $request, Contact $contact)
     {
         $form = $this->createForm(ContactType::class, $contact);
 
@@ -64,11 +64,9 @@ class AdminController extends BaseController
             $em = $this->getDoctrine()->getManager();
             $contacte = $this->getDoctrine()->getManager()->getRepository("AppBundle:Contact")->findOneBy(array(), null, ['DESC', 1]);
             $adresses = $em->getRepository("AppBundle:Adresse")->findAllByContactAdresse($contacte);
-            return $this->render('admin/edit_contact.html.twig', ['contactForm' => $form->createView(),"adresses" => $adresses]);
-
+           
+            return $this->render('admin/edit_contact.html.twig', ['contactForm' => $form->createView(), "adresses" => $adresses]);
         }
-
-
     }
 
     /**
@@ -76,7 +74,7 @@ class AdminController extends BaseController
      * @return Response
      * @Route("/adresse ",name="admin_adresse_create")
      */
-    public function nouveauAdresseAction(Request $request)
+    public function newAdresseAction(Request $request)
     {
 
         $form = $this->createForm(AdresseType::class);
@@ -90,19 +88,17 @@ class AdminController extends BaseController
             $em->flush();
             $this->addFlash('success', 'adresse a éte bien crée !');
             return $this->redirectToRoute('liste_contact');
-
         }
+       
         return $this->render('admin/new_adresse.html.twig', ['adresseForm' => $form->createView()]);
-
-
     }
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/adresse/{id}/edit",name="admin_adresse_edit")
-     *     
+     *
      */
-    public function EditAdresseAction(Request $request, Adresse $adresse)
+    public function editAdresseAction(Request $request, Adresse $adresse)
     {
         $form = $this->createForm(AdresseType::class, $adresse);
 
@@ -115,12 +111,9 @@ class AdminController extends BaseController
             $this->addFlash('success', 'adresse a été bien modifié !');
             return $this->redirectToRoute('liste_contact');
         } else {
-            return $this->render('admin/edit_adresse.html.twig',['adresseForm' => $form->createView()]);
-
+            
+            return $this->render('admin/edit_adresse.html.twig', ['adresseForm' => $form->createView()]);
         }
-
-
     }
-
 
 }

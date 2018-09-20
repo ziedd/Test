@@ -27,7 +27,7 @@ class BaseController extends Controller
     /**
      * Lancer la connection
      *
-     * @param Utilisateur $utilisateur
+     * @param  User $user
      */
     public function loginUser(User $user)
     {
